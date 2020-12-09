@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5200FFA6"
+    tools:context=".MainActivity2"
+    tools:layout_editor_absoluteX="-49dp"
+    tools:layout_editor_absoluteY="-80dp">
+
+    <TextView
+        android:id="@+id/bestScoreeTextView"
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center_vertical"
+        android:text="Best Score: 0"
+        android:textColor="#5E35B1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="102dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center_vertical"
+        android:text="Score: 0"
+        android:textColor="#5E35B1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="102dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center_vertical"
+        android:text="Time: 25"
+        android:textColor="#5E35B1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/characterToFindImg"
+        android:layout_width="160dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myLayout"
+        android:layout_width="409dp"
+        android:layout_height="308dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterToFindImg"
+        app:layout_constraintVertical_bias="0.12">
+
+        <ImageView
+            android:id="@+id/characterOnTheRunImg"
+            android:layout_width="121dp"
+            android:layout_height="94dp"
+            android:onClick="changeScore"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="104dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/deleteBestScoreButton"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
+        android:background="#FFAB00"
+        android:onClick="deleteBestScore"
+        android:text="Delete Best Score"
+        android:textColor="#3949AB"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
